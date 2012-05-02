@@ -1,0 +1,13 @@
+Simple Backup
+=============
+
+This is my personal very easy backup script. It uses hard-links to save space
+and be able to make gradual backups. 
+
+Configuration
+-------------
+
+Configuration is pretty easy. Just set the two variables at the beginning of the
+backup.sh scipt. Since I use rsync every rsync compatible location can be used
+(e.g. local folders, ssh locations etc.). Do yourself a favor and backup your
+data not on the local machine.
