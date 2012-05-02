@@ -1,5 +1,24 @@
 #!/bin/sh
 #
+###############################################################################
+#
+# Copyright 2012, Johannes Kulick <kulick@hildensia.de>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+###############################################################################
+#
 # This is my very easy backup skript. It is only invoked when the external 
 # harddrive is mounted, so all the mounting/unmounting is not part of the
 # system. Removing old snapshots is done manually so far. This would be nice to
@@ -9,9 +28,16 @@
 # should live. There can be a rsync exclude file at ~/.config/backup_excludes
 # and you need to have a ~/.cache directory (which you should have anyway).
 # you can only have one snapshot a minute (which should be no problem).
+#
+###############################################################################
+# 
+# Configuration
 
 DATA=/home/johannes     # Files to backup
 BACKUP_DIR=/mnt/backup  # Where to save the backups
+
+#
+###############################################################################
 
 # use XDG enviroment variables, if possible
 if [ -z "$XDG_DATA_HOME" ]
